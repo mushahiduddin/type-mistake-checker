@@ -46,6 +46,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text
@@ -101,7 +102,6 @@ const closeModal = () => {
 
 const start = () => {
   // If already started, do not start again
-  console.log(startTime);
   if (startTime) return;
 
   let count = 3;
