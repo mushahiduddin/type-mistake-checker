@@ -29,6 +29,7 @@ const typeController = (e) => {
     return display.removeChild(display.lastChild);
   }
 
+  //Handle scroll down while pressing spacebar.
   window.addEventListener('keydown', function(e) {
     if(e.keyCode == 32 && e.target == document.body) {
       e.preventDefault();
@@ -140,7 +141,6 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
-
 
   document.getElementById("count-timer").innerHTML = parseInt(`${startTime ? timeSpent : 0} seconds`);
 }, 1000);
